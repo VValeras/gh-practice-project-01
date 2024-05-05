@@ -15,6 +15,7 @@ jobs:
       - name: Run the lint scripts
         run: npm run lint
   test:
+    needs: lint
     runs-on: ubuntu-latest
     steps:
       - name: Bring code into the virtual machine
@@ -28,6 +29,7 @@ jobs:
       - name: Run the test scripts
         run: npm test
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Bring code into the virtual machine
