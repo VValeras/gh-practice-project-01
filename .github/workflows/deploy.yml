@@ -1,0 +1,9 @@
+name: Deploy
+on: push
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output hello
+        run: echo "Hello World!"
+      
